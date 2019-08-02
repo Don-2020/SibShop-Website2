@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="input-field ">
+                <select id="categoryMenu" onfocus="this.selectedIndex = -1;">
+                    <option selected value="">All Categories</option>
+
+                    <option value="1">Books</option>
+                    <option value="2">Article</option>
+                    <option value="3">Adult Readers</option>
+                    <option value="4">Young Readers</option>
+
+                </select>
+                {{!-- <button id="category-submit">ClickMe!</button> --}}
+                <button class="btn waves-effect waves-light" type="submit" name="action" id="category-submit">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<table class="responsive" id="library-table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Link</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each data}}
+        <tr>
+            <td>{{this.dataValues.title}}</td>
+            <td>{{this.dataValues.author}}</td>
+            <td>{{this.dataValues.url}}</td>
+            <td>{{this.dataValues.category}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
