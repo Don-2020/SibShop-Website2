@@ -12,15 +12,16 @@ module.exports = function (app) {
     res.render("workshop")
   })
 
-  // Load example page and pass in an example by id
-  app.get("/community", function(req, res) {
-    db.User.findAll({}).then(function (data){
-      console.log('community')
-      res.render("community", {data});
+  // Load chapter page 
+  app.get("/chapter", function(req, res) {
+    db.Chapter.findAll({}).then(function (data){
+      console.log('chapter')
+      res.render("chapter", {data});
     })  
 
   });
 
+// load library page and pass all the data 
   app.get("/library", function (req, res) {
     console.log("library");
     db.Library.findAll({})

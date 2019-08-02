@@ -1,11 +1,11 @@
-module.exports = function (sequelize, Datatypes) {
+module.exports = function (sequelize, DataTypes) {
 
     var Chapter = sequelize.define("Chapter", {
-        Title: Datatypes.STRING(1000),
-        Location: Datatypes.STRING(1000),
-        image:Datatypes.STRING(1000),
-        info: Datatypes.STRING(1000),
-        contact: Datatypes.STRING(1000)
+        Title: DataTypes.STRING(1000),
+        Location: DataTypes.STRING(1000),
+        image:DataTypes.STRING(1000),
+        info: DataTypes.STRING(1000),
+        contact: DataTypes.STRING(1000)
     },
     {freezeTableName: true}
     );

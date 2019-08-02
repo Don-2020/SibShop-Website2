@@ -2,7 +2,7 @@ var db = require("../models");
 
 module.exports = function (app) {
 
-    // GET all chapter posts
+    // GET all chapter 
     app.get("/api/chapter", function (req, res) {
         db.Chapter.findAll({}).then(function (response) {
             res.json(response);
