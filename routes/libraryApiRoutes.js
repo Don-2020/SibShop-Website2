@@ -19,16 +19,6 @@ module.exports = function (app) {
     });
   });
 
-  // app.get("/library", function(req, res) {
-  //   console.log("library");
-  //   db.Library.findAll({})
-  //   .then(function(data){
-  //     // console.log("==========   ", data);
-  //     console.log(data);
-  //     res.render("library", {data});
-  //   })
-  // });
-
   // Create a new library
   app.post("/api/library", function (req, res) {
     db.Library.create({
