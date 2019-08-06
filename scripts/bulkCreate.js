@@ -1,3 +1,5 @@
+
+require("dotenv").config();
 var seedData = require("./seeds");
 var seedInfo = require("./chapterSeed")
 var express = require("express");
